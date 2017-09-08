@@ -1,0 +1,36 @@
+<h2>New User</h2>
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :height %><br>
+    <%= f.number_field :height, placeholder: "Height in inches" %>
+  </p>
+  <p>
+    <%= f.label :happiness, "How happpy are you?" %><br>
+    <%= f.number_field :happiness, placeholder: "1-5 scale" %>
+  </p>
+  <p>
+    <%= f.label :nausea, "How nauseous are you?" %><br>
+    <%= f.number_field :nausea, placecholder: "1-5 scale" %>
+  </p>
+  <p>
+    <%= f.label :tickets, "How many tickets do you have?" %><br>
+    <%= f.number_field :tickets %>
+  </p>
+  <p>
+    <%= f.label :admin, "Theme park owner?" %>
+    <%= f.check_box :admin %>
+  </p>
+  <p>
+    <%= f.submit "Create User" %>
+  </p>
+<% end %>
+
+<%= link_to "Back", root_path %>
